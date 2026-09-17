@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Boleteador</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; max-width: 42rem; margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem; color: #1a1a1a; background: #fdfdfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e6; background: #17171a; }
+    a { color: #8ab4f8; }
+    code { background: #26262b; }
+  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  .fecha { color: #666; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) { .fecha { color: #999; } }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  code {
+    background: #f0f0ee; padding: .1rem .35rem;
+    border-radius: 3px; font-size: .9em;
+  }
+  footer {
+    margin-top: 3rem; padding-top: 1.25rem;
+    border-top: 1px solid #ddd; font-size: .9rem; color: #666;
+  }
+  @media (prefers-color-scheme: dark) {
+    footer { border-color: #333; color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad</h1>
+<p class="fecha">Última actualización: 17 de septiembre de 2026</p>
+
+<h2>Resumen</h2>
+<p>
+  Boleteador es una aplicación personal de un solo usuario. No recopila datos
+  de terceros, no tiene servidores propios que almacenen información, y no
+  comparte ni vende datos a nadie.
+</p>
+
+<h2>Qué datos se tratan</h2>
+<p>
+  La aplicación trata imágenes de comprobantes de pago que su propio
+  propietario le entrega, y los datos visibles en ellas: fecha, importe,
+  proveedor y número de operación.
+</p>
+
+<h2>Dónde se guardan</h2>
+<ul>
+  <li>
+    <strong>Las imágenes se guardan en el Google Drive del propietario</strong>,
+    en las carpetas que él mismo ha creado. No se copian a ningún otro sitio.
+  </li>
+  <li>
+    El equipo que ejecuta la aplicación <strong>no almacena las imágenes</strong>:
+    las procesa en memoria y las descarta al terminar.
+  </li>
+  <li>
+    En ese equipo solo queda un registro técnico con identificadores y huellas
+    digitales de los archivos ya procesados, cuyo único fin es evitar archivar
+    dos veces el mismo comprobante.
+  </li>
+</ul>
+
+<h2>Acceso a Google Drive</h2>
+<p>
+  La aplicación solicita el permiso
+  <code>https://www.googleapis.com/auth/drive</code>. Lo utiliza únicamente
+  para:
+</p>
+<ul>
+  <li>buscar carpetas existentes y reutilizarlas en lugar de duplicarlas;</li>
+  <li>crear las carpetas de año, mes, día y cliente que falten;</li>
+  <li>subir el archivo del comprobante a la carpeta correspondiente.</li>
+</ul>
+<p>
+  No lee, modifica ni elimina archivos ajenos a esa tarea, y no transfiere
+  contenido de Google Drive a ningún tercero.
+</p>
+
+<h2>Servicios de terceros</h2>
+<p>
+  Para leer la fecha y los datos impresos en cada comprobante, la imagen puede
+  enviarse a la API de Google Gemini, que la procesa y devuelve esos campos.
+  Alternativamente, la aplicación puede configurarse para usar un modelo local,
+  en cuyo caso la imagen no sale del equipo del propietario.
+</p>
+
+<h2>Conservación y eliminación</h2>
+<p>
+  Los comprobantes permanecen en el Google Drive del propietario mientras él
+  quiera. Puede eliminarlos en cualquier momento desde Drive, y puede revocar
+  el acceso de la aplicación desde
+  <a href="https://myaccount.google.com/permissions">la configuración de su
+  cuenta de Google</a>.
+</p>
+
+<h2>Uso de datos de Google</h2>
+<p>
+  El uso que Boleteador hace de la información recibida de las APIs de Google
+  se ajusta a la
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Política
+  de Datos de Usuario de los Servicios de API de Google</a>, incluidos sus
+  requisitos de uso limitado.
+</p>
+
+<h2>Contacto</h2>
+<p>
+  Para cualquier consulta sobre esta política, escriba al correo de contacto
+  indicado en la configuración de la aplicación.
+</p>
+
+<footer>
+  <p><a href="index.html">Volver al inicio</a></p>
+</footer>
+
+</body>
+</html>

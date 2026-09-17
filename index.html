@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boleteador — Archivo automático de comprobantes</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; max-width: 42rem; margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem; color: #1a1a1a; background: #fdfdfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e6; background: #17171a; }
+    a { color: #8ab4f8; }
+    code { background: #26262b; }
+  }
+  h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+  .sub { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  code {
+    background: #f0f0ee; padding: .1rem .35rem;
+    border-radius: 3px; font-size: .9em;
+  }
+  footer {
+    margin-top: 3rem; padding-top: 1.25rem;
+    border-top: 1px solid #ddd; font-size: .9rem; color: #666;
+  }
+  @media (prefers-color-scheme: dark) {
+    footer { border-color: #333; color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Boleteador</h1>
+<p class="sub">Archivo automático de comprobantes de pago en Google Drive.</p>
+
+<h2>Qué hace</h2>
+<p>
+  Boleteador es una herramienta personal y de uso privado. Recibe imágenes de
+  comprobantes de pago, lee la fecha y los datos impresos en ellas, y las
+  archiva en la carpeta correcta de Google Drive de su propietario, creando la
+  estructura de año, mes, día y cliente cuando hace falta.
+</p>
+
+<h2>Por qué existe</h2>
+<p>
+  Archivar comprobantes a mano exige abrir cada imagen, leer su fecha, navegar
+  hasta la carpeta correspondiente, crearla si no existe y renombrar el
+  archivo. Es un trabajo repetitivo, lento y propenso a errores. Boleteador lo
+  automatiza.
+</p>
+
+<h2>Qué permisos necesita y por qué</h2>
+<ul>
+  <li>
+    <code>https://www.googleapis.com/auth/drive</code> — para crear carpetas y
+    subir archivos en el Google Drive de su propietario, y para
+    <strong>reutilizar carpetas que ya existen</strong>. Un permiso más
+    restringido, como <code>drive.file</code>, solo permitiría ver archivos
+    creados por la propia aplicación, de modo que no podría encontrar las
+    carpetas creadas manualmente y acabaría duplicando la estructura.
+  </li>
+</ul>
+
+<h2>Alcance</h2>
+<p>
+  No es un servicio público. No hay registro, no admite usuarios, y cada
+  instalación funciona exclusivamente sobre la cuenta de Google de la persona
+  que la ejecuta.
+</p>
+
+<footer>
+  <p><a href="privacy.html">Política de privacidad</a></p>
+</footer>
+
+</body>
+</html>
